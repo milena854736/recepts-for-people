@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Книга рецептов</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>📖 Книга рецептов</h1>
+  <p>36 домашних рецептов · завтраки, обеды, полдники и ужины</p>
+</header>
+
+<main>
+  <div class="search-row">
+    <input type="text" id="search-name" class="search" placeholder="🔍 Поиск по названию...">
+    <input type="text" id="search-ing" class="search" placeholder="🛒 Поиск по ингредиенту...">
+  </div>
+
+  <div class="cats" id="cats">
+    <button class="cat-btn" id="cat-all">📋 Все блюда</button>
+    <button class="cat-btn" id="cat-mine">✍️ Мои рецепты</button>
+    <button class="cat-btn" id="cat-random">🎲 Случайный</button>
+  </div>
+
+  <h2 id="list-heading">Выберите категорию</h2>
+  <div id="recipe-list"></div>
+
+  <section class="add-panel">
+    <h3>✍️ Добавить свой рецепт</h3>
+    <form id="add-form">
+      <input type="text" id="f-name" placeholder="Название блюда" required>
+      <div class="row">
+        <input type="text" id="f-time" placeholder="Время (например, 30 минут)">
+        <input type="number" id="f-cal" placeholder="Калории на порцию" min="0">
+      </div>
+      <input type="text" id="f-ings" placeholder="Ингредиенты через запятую: Мука, Молоко, Яйца">
+      <textarea id="f-steps" rows="4" placeholder="Шаги приготовления через точку"></textarea>
+      <div class="row">
+        <button type="submit" class="btn-primary">Добавить рецепт</button>
+        <button type="button" id="clear-mine" class="btn-ghost">Очистить мои рецепты</button>
+      </div>
+    </form>
+    <p class="hint">Ваши рецепты сохраняются в этом браузере и остаются после перезагрузки страницы.</p>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
